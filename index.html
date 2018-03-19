@@ -6,7 +6,6 @@
     <script src="./eosjs-ecc.js"></script>
 </head>
 <body>
-
 <script>
     var ecc = eosjs_ecc
     ecc.randomKey().then(function (value) {
@@ -19,8 +18,9 @@
         document.write('<strong>private key: </strong>'+ value + '<br>')
         document.write('<strong>public key: </strong>'+ pubkey)
         document.write('</div>')
+    }).then(function () {
+        document.title = 'EOS Key Generate'
     })
 </script>
-
 </body>
 </html>
